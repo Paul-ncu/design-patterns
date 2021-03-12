@@ -66,4 +66,7 @@ public class FishingBoatAdapter implements RowingBoat {
     boat.sail();
   }
 }
+
 ```
+
+## 3. 模式的优点和缺点

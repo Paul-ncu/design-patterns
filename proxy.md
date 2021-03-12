@@ -15,6 +15,8 @@ public interface WizardTower {
 }
 ```
 
+ ``IvoryTower`` 是被代理的对象实现了 ``WizardTower`` 接口
+
 ```java
 public class IvoryTower implements WizardTower {
 
@@ -27,7 +29,7 @@ public class IvoryTower implements WizardTower {
 }
 ```
 
-``WizardTowerProxy`` 作为 ``IvoryTower`` 的代理类，他们共同实现了 ``WizardTower`` 接口的方法。在 ``WizardTowerProxy`` 的内部对被代理类 ``IvoryTower`` 进行了进一步的封装
+``WizardTowerProxy`` 作为 ``IvoryTower`` 的代理类，他们共同实现了 ``WizardTower`` 接口的方法。在 ``WizardTowerProxy`` 的内部对被代理类 ``IvoryTower`` 进行了进一步的封装。
 
 ```java
 public class WizardTowerProxy implements WizardTower {
@@ -74,3 +76,13 @@ public class Wizard {
 
 }
 ```
+
+## 3. 模式优缺点
+
+### 3.1 优点
+
+代理模式在客户端和目标对象之间具有一定的保护作用，同时可以扩展目标对象的功能，将客户端和目标对象隔离，降低了系统的耦合度，增加了程序的可扩展性。
+
+### 3.2 缺点
+
+在使用代理模式的时候会增加类的数量，使得请求的速度变慢，同时会增加系统的复杂性。
